@@ -1,0 +1,151 @@
+@use "../utils" as *;
+@use "../globals" as *;
+
+
+#header {
+    .header {
+
+
+        &_left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &_right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+
+.header_left {
+    &_text {
+        position: relative;
+        font-size: 2rem;
+        font-weight: bold;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        &_icon {
+            position: absolute;
+            top: -24px;
+            left: -26px;
+            transform: rotate(-45deg);
+            font-size: 2.2rem;
+            color: var(--color-common);
+        }
+
+    }
+}
+
+.header_right {
+    &_list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+
+        &_item {
+            font-weight: 600;
+            margin: 0px 10px;
+            transition: all .5s;
+            position: relative;
+
+        }
+    }
+
+    &_search {
+        background-color: white;
+        height: 46px;
+        width: 255px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 4px 4px 10px rgba($color: #000000, $alpha: .3);
+
+        input {
+            border: none;
+            outline: none;
+            padding: 0px 20px;
+            width: 190px;
+        }
+
+        &_icon {
+
+            &_delete {
+                cursor: pointer;
+            }
+
+            &_search {
+                position: absolute;
+                right: 0;
+                padding: 15px 12px;
+                cursor: pointer;
+                border-left: 1px solid rgb(229, 227, 227);
+                transition: all .5s;
+
+                &:hover {
+                    background-color: var(--color-common);
+                    transition: all .5s;
+
+                }
+            }
+
+        }
+    }
+
+    &_mode {
+        &_icon {
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+    }
+}
+
+.header_right_list_item {
+
+    &_icon {
+        position: absolute;
+        top: -16px;
+        left: 50%;
+        transform: translate(-50%, -500%);
+        transition: all .5s;
+
+
+    }
+
+    &:hover {
+        color: var(--color-common);
+        transition: all .5s;
+        cursor: pointer;
+
+        .header_right_list_item_icon {
+            transform: translate(-50%, 0%);
+            transition: all .5s;
+            color: var(--color-common);
+
+        }
+    }
+
+    &.active {
+        color: var(--color-common);
+        transition: all .5s;
+        cursor: pointer;
+
+        .header_right_list_item_icon {
+            transform: translate(-50%, 0%);
+            transition: all .5s;
+            color: var(--color-common);
+
+        }
+    }
+}

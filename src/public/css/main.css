@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:root {
+  --color-black: black;
+  --color-white: white;
+  --color-common: #fbb034;
+}
+
+#header {
+  height: 66px;
+  width: 78%;
+  margin: 30px 0px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  transition: all 0.5s;
+  position: fixed;
+}
+
+#slider {
+  background: url(../image/slider/banner.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  animation: gradient 15s ease infinite;
+  position: relative;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#header .header_left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .header_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_left_text {
+  position: relative;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.header_left_text h1 {
+  font-size: 2rem;
+}
+.header_left_text_icon {
+  position: absolute;
+  top: -24px;
+  left: -26px;
+  transform: rotate(-45deg);
+  font-size: 2.2rem;
+  color: var(--color-common);
+}
+
+.header_right_list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.header_right_list_item {
+  font-weight: 600;
+  margin: 0px 10px;
+  transition: all 0.5s;
+  position: relative;
+}
+.header_right_search {
+  background-color: white;
+  height: 46px;
+  width: 255px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.header_right_search input {
+  border: none;
+  outline: none;
+  padding: 0px 20px;
+  width: 190px;
+}
+.header_right_search_icon_delete {
+  cursor: pointer;
+}
+.header_right_search_icon_search {
+  position: absolute;
+  right: 0;
+  padding: 15px 12px;
+  cursor: pointer;
+  border-left: 1px solid rgb(229, 227, 227);
+  transition: all 0.5s;
+}
+.header_right_search_icon_search:hover {
+  background-color: var(--color-common);
+  transition: all 0.5s;
+}
+.header_right_mode_icon {
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.header_right_list_item_icon {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translate(-50%, -500%);
+  transition: all 0.5s;
+}
+.header_right_list_item:hover {
+  color: var(--color-common);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.header_right_list_item:hover .header_right_list_item_icon {
+  transform: translate(-50%, 0%);
+  transition: all 0.5s;
+  color: var(--color-common);
+}
+.header_right_list_item.active {
+  color: var(--color-common);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.header_right_list_item.active .header_right_list_item_icon {
+  transform: translate(-50%, 0%);
+  transition: all 0.5s;
+  color: var(--color-common);
+}
+
+#slider .slider_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.slider_overlay_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider_overlay_content_introduce_text_1 {
+  font-weight: 500;
+  font-size: 40px;
+  width: 400px;
+}
+.slider_overlay_content_introduce_text_2 {
+  font-weight: 900;
+  font-size: 60px;
+  width: 600px;
+  margin-bottom: 20px;
+  line-height: 56px;
+}
+.slider_overlay_content_introduce_btn {
+  border: none;
+  outline: none;
+  font-size: 22px;
+  background-color: red;
+  color: var(--color-white);
+  border-radius: 40px;
+  padding: 6px 28px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-image: linear-gradient(90deg, #ffc845 0%, #f99857 51%, #fd4a2f 100%);
+  transition: all 0.5s ease-in-out;
+}
+.slider_overlay_content_introduce_btn:hover {
+  background-image: linear-gradient(90deg, #fd4a2f 0%, #f99857 51%, #ffc845 100%);
+}
+
+/*# sourceMappingURL=main.css.map */

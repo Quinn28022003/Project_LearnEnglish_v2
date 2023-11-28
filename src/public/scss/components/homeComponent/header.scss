@@ -1,0 +1,363 @@
+@use "../../utils" as *;
+@use "../../globals" as *;
+
+
+#header {
+
+    .header {
+
+
+        &_left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &_right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+
+    &.whenScroll {
+        height: auto;
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 2;
+        left: 50%;
+        transform: translate(-50%, 0px);
+        transition: all .5s;
+        position: fixed;
+        padding: 30px 160px 16px 160px;
+        background-color: var(--color-white);
+        box-shadow: 2px 2px 10px rgba($color: #000000, $alpha: .2);
+
+        @include responsive($breakPoint: 1280px) {
+            padding: 30px 100px 16px 100px;
+        }
+
+        @include responsive($breakPoint: 640px) {
+            padding: 30px 60px 16px 60px;
+        }
+    }
+}
+
+
+.header_left {
+    &_text {
+        position: relative;
+        font-size: 2rem;
+        font-weight: bold;
+
+        h1 {
+            font-size: 2rem;
+
+            @include responsive(468px) {
+                font-size: 1.3rem;
+            }
+        }
+
+        &_icon {
+            position: absolute;
+            top: -24px;
+            left: -26px;
+            transform: rotate(-45deg);
+            font-size: 2.2rem;
+            color: var(--color-common);
+
+            @include responsive(468px) {
+                font-size: 1.5rem;
+                top: -17px;
+                left: -18px;
+            }
+        }
+
+    }
+}
+
+.header_right {
+    &_list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+
+        &_item {
+            font-weight: 600;
+            margin: 0px 10px;
+            transition: all .5s;
+            position: relative;
+
+            @include responsive($breakPoint: 1280px) {
+                text-align: center;
+                border-bottom: 1px solid rgb(240, 240, 240);
+                padding: 8px 0px;
+            }
+        }
+
+        @include responsive($breakPoint: 1280px) {
+            position: absolute;
+            bottom: -317%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            display: block;
+            background-color: white;
+            box-shadow: 2px 8px 10px rgba($color: #000000, $alpha: .2);
+            width: 100%;
+
+            &-whenScroll {
+                position: absolute;
+                bottom: -217%;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                display: block;
+                background-color: white;
+                box-shadow: 2px 8px 10px rgba($color: #000000, $alpha: .2);
+                width: 100%;
+            }
+        }
+    }
+
+    &_search {
+        background-color: white;
+        height: 46px;
+        width: 255px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 4px 4px 10px rgba($color: #000000, $alpha: .3);
+
+        input {
+            border: none;
+            outline: none;
+            padding: 0px 20px;
+            width: 190px;
+
+            @include responsive($breakPoint: 1280px) {
+                margin: 0 auto;
+            }
+
+            @include responsive($breakPoint: 768px) {
+                margin-left: 100px;
+            }
+
+            @include responsive($breakPoint: 640px) {
+                margin-left: 60px;
+            }
+
+            @include responsive($breakPoint: 550px) {
+                margin-left: 0;
+            }
+
+
+        }
+
+        &_icon {
+
+            &_delete {
+                cursor: pointer;
+                padding: 8px 2px;
+
+                @include responsive($breakPoint: 1280px) {
+                    position: absolute;
+                    right: 36%;
+
+                }
+
+                @include responsive($breakPoint: 1024px) {
+                    position: absolute;
+                    right: 30%;
+                }
+
+                @include responsive($breakPoint: 768px) {
+                    position: absolute;
+                    right: 34%;
+                }
+
+                @include responsive($breakPoint: 640px) {
+                    position: absolute;
+                    right: 36%;
+                }
+
+                @include responsive($breakPoint: 444px) {
+                    position: absolute;
+                    right: 24%;
+                }
+
+            }
+
+            &_search {
+                position: absolute;
+                right: 0;
+                padding: 15px 12px;
+                cursor: pointer;
+                border-left: 1px solid rgb(229, 227, 227);
+                transition: all .5s;
+
+                &:hover {
+                    background-color: var(--color-common);
+                    transition: all .5s;
+
+                }
+
+                @include responsive($breakPoint: 1280px) {
+                    right: 30%;
+                    border-right: 1px solid rgb(229, 227, 227);
+                }
+
+                @include responsive($breakPoint: 1024px) {
+                    position: absolute;
+                    right: 22%;
+                }
+
+                @include responsive($breakPoint: 768px) {
+                    right: 24%;
+                    border-right: 1px solid rgb(229, 227, 227);
+                }
+
+                @include responsive($breakPoint: 444px) {
+                    right: 10%;
+                    border-right: 1px solid rgb(229, 227, 227);
+                }
+            }
+
+        }
+
+        @include responsive($breakPoint: 1280px) {
+            position: absolute;
+            bottom: -386%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            box-shadow: none;
+            border-radius: 0px;
+            width: 100%;
+            padding: 0px 200px;
+            box-shadow: 3px 3px 10px rgba($color: #000000, $alpha: .2);
+
+            &-whenScroll {
+                position: absolute;
+                bottom: -265%;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                box-shadow: none;
+                border-radius: 0px;
+                width: 100%;
+                padding: 0px 200px;
+                box-shadow: 3px 3px 10px rgba($color: #000000, $alpha: .2);
+            }
+        }
+
+        @include responsive($breakPoint: 768px) {
+            position: absolute;
+            bottom: -386%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            box-shadow: none;
+            border-radius: 0px;
+            width: 100%;
+            padding: 0px 20px;
+            box-shadow: 3px 3px 10px rgba($color: #000000, $alpha: .2);
+
+            &-whenScroll {
+                position: absolute;
+                bottom: -265%;
+                left: 50%;
+                transform: translate(-50%, 0%);
+                box-shadow: none;
+                border-radius: 0px;
+                width: 100%;
+                padding: 0px 20px;
+                box-shadow: 3px 3px 10px rgba($color: #000000, $alpha: .2);
+            }
+        }
+    }
+
+    &_mode {
+        &_icon {
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 24px;
+
+            @include responsive($breakPoint: 468px) {
+                font-size: 20px;
+            }
+        }
+
+
+    }
+
+    &_menu {
+        display: none;
+
+        &_icon {
+            padding: 8px 12px;
+            font-size: 32px;
+
+
+            @include responsive($breakPoint: 468px) {
+                font-size: 26px;
+            }
+        }
+
+        @include responsive($breakPoint: 1280px) {
+            display: block;
+        }
+    }
+
+
+}
+
+.header_right_list_item {
+
+    &_icon {
+        position: absolute;
+        top: -16px;
+        left: 50%;
+        transform: translate(-50%, -500%);
+        transition: all .5s;
+
+        @include responsive($breakPoint: 1280px) {
+            display: none !important;
+        }
+    }
+
+    &:hover {
+        color: var(--color-common);
+        transition: all .5s;
+        cursor: pointer;
+
+        .header_right_list_item_icon {
+            transform: translate(-50%, 0%);
+            transition: all .5s;
+            color: var(--color-common);
+
+            @include responsive($breakPoint: 1280px) {
+                display: none;
+            }
+        }
+    }
+
+    &.active {
+        color: var(--color-common);
+        transition: all .5s;
+        cursor: pointer;
+
+        .header_right_list_item_icon {
+            transform: translate(-50%, 0%);
+            transition: all .5s;
+            color: var(--color-common);
+
+            @include responsive($breakPoint: 1280px) {
+                display: none;
+            }
+        }
+    }
+}

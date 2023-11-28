@@ -1,0 +1,18 @@
+@mixin responsive($breakPoint) {
+    @media screen and (max-width: $breakPoint) {
+        @content;
+    }
+}
+
+@mixin responsiveMin($breakPointMin) {
+    @media screen and (min-width: $breakPointMin) {
+        @content;
+    }
+}
+
+@mixin gridColumnRowStartEnd($C_Start, $C_End, $R_Start, $R_End) {
+    grid-column-start: $C_Start;
+    grid-column-end: $C_End;
+    grid-row-start: $R_Start ;
+    grid-row-end: $R_End ;
+}

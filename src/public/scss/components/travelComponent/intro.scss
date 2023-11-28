@@ -1,0 +1,66 @@
+@use "../../utils" as *;
+@use "../../globals" as *;
+
+#intro {
+    .intro {
+
+        &_customBackground {
+            background: url(../image/travel/img3.jpg) center center/cover no-repeat;
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+
+}
+
+.intro_customBackground {
+    &_content {
+        text-align: center;
+
+        &_title {
+            font-size: 50px;
+            font-weight: 600;
+
+            @include responsiveMin($breakPointMin: 768px) {
+                font-size: 70px;
+            }
+        }
+
+        &_text {
+            font-size: 20px;
+            width: 300px;
+            font-weight: 600;
+
+
+            @include responsiveMin($breakPointMin: 575px) {
+                width: 500px;
+            }
+
+            @include responsiveMin($breakPointMin: 768px) {
+                width: 700px;
+            }
+
+            @include responsiveMin($breakPointMin: 1024px) {
+                width: 800px;
+                font-size: 26px;
+            }
+        }
+
+        &_btn {
+            outline: none;
+
+
+            i {
+
+                &:hover {
+                    background-color: black !important;
+                }
+            }
+
+            &:hover {
+                background-color: white !important;
+                color: black !important;
+            }
+        }
+    }
+}

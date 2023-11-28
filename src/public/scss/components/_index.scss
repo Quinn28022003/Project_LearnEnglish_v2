@@ -1,4 +1,5 @@
-@forward 'layout.scss';
-@forward 'orther.scss';
-@forward 'header.scss';
-@forward 'slider.scss';
+@forward './homeComponent';
+@forward './loginComponent/';
+@forward './courseComponent/';
+@forward './registerComponent/';
+@forward './travelComponent/';

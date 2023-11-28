@@ -1,0 +1,26 @@
+@use "../../utils" as *;
+@use "../../globals" as *;
+
+
+// page login
+
+#page_login_slider {
+    background: url(../image/page_login/pexels-photo-5212703.webp) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 30vh;
+    animation: gradient 15s ease infinite;
+    position: relative;
+}
+
+
+#page_login_content {
+    @extend %backgroundCommon;
+    border-bottom: 1px solid rgb(210, 206, 206);
+    padding: 50px 150px;
+
+    @include responsive($breakPoint: 768px) {
+        padding: 30px 10px;
+
+    }
+}

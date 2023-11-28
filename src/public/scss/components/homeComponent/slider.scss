@@ -1,0 +1,118 @@
+@use "../../utils" as *;
+@use "../../globals" as *;
+
+#slider {
+    .slider {
+        &_overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            // pointer-events: none;
+        }
+    }
+}
+
+.slider_overlay {
+    &_content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all .5s;
+
+        &_introduce {
+            width: 500px;
+
+            &_text_1 {
+                font-weight: 500;
+                font-size: 40px;
+                width: 400px;
+
+                @include responsive($breakPoint: 1024px) {
+                    width: 330px;
+                    font-size: 34px;
+                }
+
+                @include responsive($breakPoint: 640px) {
+                    width: 330px;
+                    font-size: 28px;
+                }
+            }
+
+            &_text_2 {
+                font-weight: 900;
+                font-size: 60px;
+                width: 600px;
+                margin-bottom: 20px;
+                line-height: 56px;
+
+                @include responsive($breakPoint: 1024px) {
+                    width: 450px;
+                    font-size: 48px;
+                }
+
+                @include responsive($breakPoint: 640px) {
+                    width: 330px;
+                    font-size: 42px;
+                }
+            }
+
+            &_btn {
+                @extend %buttonAllWebsite;
+
+
+                &::before {
+                    @extend %buttonAllWebsiteBefore;
+
+                }
+
+                &:hover::before {
+                    @extend %buttonAllWebsiteHover;
+                }
+            }
+
+            @include responsive($breakPoint: 1280px) {
+                width: 430px;
+            }
+
+            @include responsive($breakPoint: 1024px) {
+                width: 320px;
+                margin: 0 auto;
+            }
+        }
+
+        &_img {
+            img {
+                @include responsive($breakPoint: 1280px) {
+                    width: 340px;
+                }
+
+                @include responsive($breakPoint: 1024px) {
+                    width: 320px;
+                    margin: 0 auto;
+                }
+
+                @include responsive($breakPoint: 868px) {
+                    width: 300px;
+                    height: 300px;
+                    margin: 30px auto 0px auto;
+                }
+            }
+
+        }
+
+        @include responsive($breakPoint: 768px) {
+            display: block;
+            top: 58%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all .5s;
+        }
+    }
+}

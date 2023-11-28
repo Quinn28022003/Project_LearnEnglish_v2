@@ -1,0 +1,30 @@
+@use "../../utils" as *;
+@use "../../globals" as *;
+
+
+#examples {
+    .examples {
+        &_title {
+            font-size: 30px;
+            text-align: center;
+            font-weight: 900;
+        }
+
+        &_list {
+
+            &_item {
+                margin-bottom: 40px;
+
+                img {
+                    width: 100%;
+                }
+
+                h3 {
+                    font-weight: 600;
+                    margin: 20px 0px;
+                }
+            }
+        }
+    }
+
+}

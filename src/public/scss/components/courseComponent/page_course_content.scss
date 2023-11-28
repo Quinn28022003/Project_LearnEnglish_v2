@@ -1,0 +1,142 @@
+@use "../../utils" as *;
+@use "../../globals" as *;
+
+
+#page_course_content {
+    .page_course_content {
+        &_title {
+            margin-bottom: 50px;
+
+            h2:nth-of-type(1) {
+                font-size: 16px;
+                font-weight: 500;
+                text-align: center;
+            }
+
+            h2:nth-of-type(2) {
+                font-size: 40px;
+                width: 500px;
+                margin: 0 auto;
+                text-align: center;
+
+                @include responsive($breakPoint: 768px) {
+                    width: auto;
+                    font-size: 32px;
+
+                }
+            }
+
+
+        }
+
+        &_courses {}
+    }
+}
+
+.page_course_content_courses {
+    &_list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 26px;
+        list-style: none;
+
+        &_item {
+            width: 30%;
+            box-shadow: 4px 4px 15px rgba($color: #000000, $alpha: .4);
+            border-radius: 6px;
+
+            &_img {
+                img {
+                    width: 100%;
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 6px;
+                }
+            }
+
+            &_content {
+                padding: 20px;
+            }
+
+            @include responsive($breakPoint: 1024px) {
+                width: 40%;
+            }
+
+            @include responsive($breakPoint: 768px) {
+                width: 80%;
+            }
+        }
+    }
+}
+
+.page_course_content_courses_list_item_content {
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+
+        li {
+
+            i {
+                font-size: 20px;
+                margin-right: 2px;
+                color: var(--color-common);
+            }
+
+            // span {}
+
+
+
+        }
+    }
+
+    h2 {
+        font-size: 22px;
+        margin: 10px 0px;
+
+        @include responsive($breakPoint: 1280px) {
+            font-size: 16px;
+        }
+    }
+
+    p {
+        opacity: .6;
+        margin-bottom: 12px;
+
+        @include responsive($breakPoint: 1280px) {
+            font-size: 14px;
+        }
+    }
+
+    &_footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &_price {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        &_btn {
+            @extend %buttonAllWebsite;
+            font-size: 18px;
+            font-weight: bold;
+
+            &:before {
+                @extend %buttonAllWebsiteBefore;
+
+            }
+
+            &:hover::before {
+                @extend %buttonAllWebsiteHover;
+
+            }
+        }
+
+
+    }
+}

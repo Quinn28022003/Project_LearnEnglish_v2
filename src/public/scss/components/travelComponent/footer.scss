@@ -1,0 +1,59 @@
+@use "../../utils" as *;
+@use "../../globals" as *;
+
+#footerBoostrap {
+    ul {
+        li {
+            h5 {
+                font-weight: 800;
+
+                @include responsiveMin($breakPointMin: 768px) {
+                    text-align: left !important;
+                }
+            }
+
+            h6 {
+                font-weight: 800;
+                border-bottom: 1px solid rgb(207, 207, 207);
+                width: 160px;
+                margin: 20px auto;
+                padding: 10px 0px;
+
+                @include responsiveMin($breakPointMin: 768px) {
+                    text-align: left !important;
+                    margin: 20px 0px;
+                }
+            }
+
+            p {
+                a {
+                    color: #007bff;
+                }
+            }
+
+            &.item_modify {
+
+
+                @include responsiveMin($breakPointMin: 768px) {
+                    text-align: right !important;
+                    padding: 0px 50px;
+                }
+
+                @include responsiveMin($breakPointMin: 992px) {
+                    text-align: right !important;
+                    padding: 0px 120px;
+                }
+            }
+
+            @include responsiveMin($breakPointMin: 768px) {
+                text-align: left !important;
+            }
+        }
+    }
+
+    .footerBoostrap_copyright {
+        a {
+            color: #007bff;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+%buttonAllWebsite {
+    position: relative;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    background-color: red;
+    color: var(--color-white);
+    border-radius: 40px;
+    padding: 6px 28px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-image: linear-gradient(90deg, #ffc845 0%, #f99857 51%, #fd4a2f 100%);
+    transition: all 2s ease-in-out;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: .6);
+}
+
+%buttonAllWebsiteBefore {
+    position: absolute;
+    content: "";
+    border-radius: 40px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(90deg, #fd4a2f 0%, #f99857 51%, #ffc845 100%);
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+}
+
+%buttonAllWebsiteHover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+%backgroundCommon {
+    background: url(../image/background/hinh-nen-powerpoint-lich-su-background-cay-tre-viet-nam.jpg) no-repeat center;
+    background-size: cover;
+    height: auto;
+}
+
+
+%inputCommon {
+    border: none;
+    outline: none;
+    box-shadow: 4px 4px 10px rgba($color: #000000, $alpha: .4);
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 12px;
+    margin: 12px 20px;
+    width: 320px;
+}

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn English</title>
+    <title>Learn English - Home</title>
     <link rel="icon" href="./public/image/logo/favicon.ico">
     <link rel="stylesheet" href="./public/css/main.css">
     <link rel="stylesheet" href="./public/icon/fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.min.css">
@@ -13,59 +13,53 @@
 </head>
 
 <body>
-    <header id="header">
-        <div class="header_left">
-            <div class="header_left_text">
-                <a href="">
-                    <h1>Learn English</h1>
-                    <div class="header_left_text_icon">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-                </a>
-
-            </div>
-
-        </div>
+    <header id="header" class="header">
+        <div id="header_left_id" class="header_left"></div>
         <div class="header_right">
-            <ul class="header_right_list">
-                <li class="header_right_list_item active ">
-                    <a href="">
+            <ul id="header_right_list_id" class="header_right_list">
+                <li id="header_right_list_item_id" class="header_right_list_item active" number="1">
+                    <a href="http://127.0.0.1:5500/src/main.html">
                         <i class="fa-solid fa-house header_right_list_item_icon  "></i>
                         Home
                     </a>
                 </li>
-                <li class="header_right_list_item">
-                    <a href="">
+                <li id="header_right_list_item_id" class="header_right_list_item" number="2">
+                    <a href="http://127.0.0.1:5500/src/views/course.html">
                         <i class="fa-solid fa-table-cells-large header_right_list_item_icon"></i>
                         Course
                     </a>
                 </li>
-                <li class="header_right_list_item">
-                    <a href="">
+                <li id="header_right_list_item_id" class="header_right_list_item" number="3">
+                    <a href="http://127.0.0.1:5500/src/views/register.html">
                         <i class="fa-solid fa-pager  header_right_list_item_icon"></i>
-                        Pages
+                        Register
                     </a>
                 </li>
-                <li class="header_right_list_item">
-                    <a href="">
+                <li id="header_right_list_item_id" class="header_right_list_item" number="4">
+                    <a href="http://127.0.0.1:5500/src/views/login.html">
                         <i class="fa-solid fa-square header_right_list_item_icon"></i>
-                        Blog
+                        Login
                     </a>
                 </li>
-                <li class="header_right_list_item">
-                    <a href="">
+                <li id="header_right_list_item_id" class="header_right_list_item" number="5">
+                    <a href="http://127.0.0.1:5500/src/views/travel.html">
                         <i class="fa-solid fa-address-card header_right_list_item_icon"></i>
-                        Contact
+                        Travel
                     </a>
                 </li>
             </ul>
-            <div class="header_right_search">
-                <input type="text" placeholder="search...">
-                <i class="fa-solid fa-circle-xmark header_right_search_icon_delete"></i>
+            <div id="header_right_search_id" class="header_right_search ">
+                <input id="header_right_search_input_id" type="text" placeholder="search...">
+                <i id="header_right_search_icon_delete_id"
+                    class="fa-solid fa-circle-xmark header_right_search_icon_delete displayNone"></i>
                 <i class="fa-solid fa-magnifying-glass header_right_search_icon_search"></i>
             </div>
             <div class="header_right_mode">
                 <i class="fa-regular fa-moon header_right_mode_icon"></i>
+            </div>
+
+            <div id="header_right_menu_id" class="header_right_menu">
+                <i class="fa-solid fa-bars-staggered header_right_menu_icon"></i>
             </div>
         </div>
     </header>
@@ -91,6 +85,274 @@
                     <img src="../src/public/image/slider/unnamed.png" alt="">
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="studyPlan">
+        <div class="studyPlan_title">
+            <h2>
+                Course Objectives
+            </h2>
+            <h2>
+                We Are Your Best Choice
+            </h2>
+        </div>
+        <div class="studyPlan_content">
+            <ul class="studyPlan_content_list">
+                <li class="studyPlan_content_list_item">
+                    <i id="bg_color_lightgreen" class="fa-solid fa-building-columns"></i>
+                    <h3>
+                        Học Toàn Diện
+                    </h3>
+                    <h3>
+                        Học bài bản từ đầu
+                    </h3>
+                    <p>
+                        Lộ trình này phụ hợp với Học viên muốn học từ đầu kiến thức bài bản, Có thời gian tối thiểu 06
+                        tháng.
+                    </p>
+                    <button>
+                        XEM CHI TIẾT
+                    </button>
+                </li>
+                <li class="studyPlan_content_list_item">
+                    <i id="bg_color_lightBlue" class="fa-solid fa-shoe-prints"></i>
+                    <h3 class="">
+                        Học Cấp Tốc
+                    </h3>
+                    <h3>
+                        Luyện thi chứng chỉ
+                    </h3>
+                    <p>
+                        Lộ trình này phụ hợp với Học viên muốn học ôn lại nhanh trước những kỳ thi quan trong như THPT,
+                        TOEIC, IELTS... ,
+                        người muốn chuẩn bị trong thời gian ngắn trước khi bước vào quá trình luyện đề gian khổ, có thời
+                        gian tối thiểu 02 tháng.
+                    </p>
+                    <button>
+                        XEM CHI TIẾT
+                    </button>
+                </li>
+                <li class="studyPlan_content_list_item">
+                    <i id="bg_color_red" class="fa-brands fa-studiovinari"></i>
+                    <h3>
+                        Học Cấp Tốc
+                    </h3>
+                    <h3>
+                        Học với mục tiêu giao tiếp nhanh
+                    </h3>
+                    <p>
+                        Lộ trình này phụ hợp với Học viên muốn tập trung hoàn toàn vào phát triễn kỹ năng giao tiếp
+                        (nghe và nói) trong thời gian ngắn, có thời gian tối thiểu 60 ngày.
+                    </p>
+                    <button>
+
+                        XEM CHI TIẾT
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="advertisement">
+        <div class="advertisement_left">
+            <div class="advertisement_left_img">
+                <img src="./public/image/advertisement/img1.jpg" alt="">
+                <div class="advertisement_left_img_content">
+                    <h3>
+                        Get a Appointment Today!
+                    </h3>
+                    <p>
+                        Nemo enim ipsam oluptatem quia oluptas
+                        sit aspernatur aut odit aut fugit.
+                    </p>
+                    <span>
+                        <i class="fa-solid fa-phone"></i>
+                        094-170-3743
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="advertisement_right">
+            <h2>
+                We are your best choice
+            </h2>
+            <p>
+                Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Special Education
+                </li>
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Access over 100k online lessons
+                </li>
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Traditional Academies
+                </li>
+            </ul>
+            <button>
+                Apply Now
+            </button>
+        </div>
+    </section>
+
+    <section id="courseSlider">
+        <h2 class="courseSlider_title">
+            English course
+        </h2>
+        <p class="courseSlider_text">
+            Please select a suitable course for yourself.
+        </p>
+        <div class="courseSlider_content">
+            <button id="courseSlider_content_btnLeft_id" class="courseSlider_content_btnLeft "><i
+                    class="fa-solid fa-chevron-left"></i></button>
+            <img id="courseSlider_content_image_id" number="0" src="./public/image/course_slider/giao_tiep.webp" alt=""
+                class="courseSlider_content_image ">
+            <img id="courseSlider_content_image_id" number="1" src="./public/image/course_slider/ngu_phap.webp" alt=""
+                class="courseSlider_content_image displayNone">
+            <img id="courseSlider_content_image_id" number="2" src="./public/image/course_slider/phat_am.webp" alt=""
+                class="courseSlider_content_image displayNone">
+            <img id="courseSlider_content_image_id" number="3" src="./public/image/course_slider/tu_vung.webp" alt=""
+                class="courseSlider_content_image displayNone">
+            <button id="courseSlider_content_btnRight_id" class="courseSlider_content_btnRight"><i
+                    class="fa-solid fa-chevron-right"></i></button>
+            <div id="courseSlider_content_introduce_id" class="courseSlider_content_introduce"></div>
+        </div>
+        <ul class="courseSlider_list">
+            <li id="courseSlider_list_item_id" number="0" class="courseSlider_list_item active"></li>
+            <li id="courseSlider_list_item_id" number="1" class="courseSlider_list_item"></li>
+            <li id="courseSlider_list_item_id" number="2" class="courseSlider_list_item"></li>
+            <li id="courseSlider_list_item_id" number="3" class="courseSlider_list_item"></li>
+        </ul>
+        <button class="courseSlider_btnBottom"><a href="http://127.0.0.1:5500/src/views/course.html">See
+                More...</a></button>
+    </section>
+    <section id="invite">
+        <div class="invite_left">
+            <h2 class="invite_left_title">
+                Register for classes now.
+            </h2>
+            <p class="invite_left_text">
+                Begin the change today!
+            </p>
+        </div>
+        <div class="invite_right">
+            <i class="fa-solid fa-phone"></i>
+            <span>
+                +84 941 703 743
+            </span>
+            <button>
+                Join for free
+            </button>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="footer_container">
+            <div id="footer_container_item_1_id" class="footer_container_item footer_container_item_1">
+
+            </div>
+            <div class="footer_container_item footer_container_item_2">
+                <h3 class="footer_container_item_2_title">
+                    Archives
+                </h3>
+                <ul class="footer_container_item_2_list">
+                    <li class="footer_container_item_2_list_item">
+                        November 2023
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer_container_item footer_container_item_3">
+                <h3 class="footer_container_item_3_title">
+                    Outstanding Course
+                </h3>
+                <ul class="footer_container_item_3_list">
+                    <li class="footer_container_item_3_list_item">
+                        Communicate
+                    </li>
+                    <li class="footer_container_item_3_list_item">
+                        Vocabulary
+                    </li>
+                    <li class="footer_container_item_3_list_item">
+                        grammar
+                    </li>
+                    <li class="footer_container_item_3_list_item">
+                        pronunciation
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer_container_item footer_container_item_4">
+                <h3 class="footer_container_item_4_title">
+                    Main Function
+                </h3>
+                <ul class="footer_container_item_4_list">
+                    <li class="footer_container_item_4_list_item">
+                        Log in
+                    </li>
+                    <li class="footer_container_item_4_list_item">
+                        Register
+                    </li>
+                    <li class="footer_container_item_4_list_item">
+                        Studying through online lessons
+                    </li>
+                    <li class="footer_container_item_4_list_item">
+                        Select/purchase a course
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_container_item footer_container_item_5">
+                <h3 class="footer_container_item_5_title">
+                    Newsletter
+                </h3>
+                <div class="footer_container_item_5_container_input">
+                    <input type="text" placeholder="Email Address">
+                    <button>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+                <p class="footer_container_item_5_text">
+                    Subscribe to our mailing list and get updates to your email inbox.
+                </p>
+                <ul class="footer_container_item_5_list">
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-google-plus-g"></i>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_copyright">
+            <p>© 2023 Setup. All Rights Reserved | Online English Learning Topics.</p>
         </div>
     </section>
 </body>

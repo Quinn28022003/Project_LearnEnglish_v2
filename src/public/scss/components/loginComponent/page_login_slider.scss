@@ -1,0 +1,44 @@
+@use "../../utils" as *;
+@use "../../globals" as *;
+
+#page_login_slider {
+    .page_login_slider {
+
+        &_bgLight {
+            position: absolute;
+            background-color: rgba($color: #eceaea, $alpha: .8);
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+
+            &_containerPath {
+                position: absolute;
+                top: 60%;
+                left: 10%;
+                color: var(--color-white);
+
+                &_title,
+                &_text-1,
+                &_text-2 {
+                    text-shadow: 4px 4px 10px rgba($color: #000000, $alpha: .8);
+                }
+
+                &_title {
+                    margin-bottom: 10px;
+                    font-size: 26px;
+                }
+
+                &_text-1 {}
+
+                i {
+                    margin: 0px 10px;
+                    font-size: 12px;
+                }
+
+                &_text-2 {}
+            }
+        }
+
+    }
+}
